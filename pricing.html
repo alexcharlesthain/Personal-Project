@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/searchbar.css">
+
+    <script src="js/ufcnowshop.js"></script>
     <!--<link rel="stylesheet" href="css/login.css">-->
     <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -150,8 +154,9 @@ span.psw {
 </style>
 
   </head>
-  <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <body onload="loadDb()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Shop</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -224,6 +229,19 @@ window.onclick = function(event) {
         </div>
       </div>
     </section>
+    <div>
+    <div class="wrap">
+      <div class="search">
+        <input type="text" class="searchTerm" placeholder="Type any letter to begin searching products.." onInput="searchProducts(document.getElementById('textsearch'))" id="textsearch">
+        <button type="submit" class="searchButton" onClick="searchProducts(document.getElementById('textsearch'))">
+          <i class="fa fa-search">
+        </button>
+        <br><br><br>
+        <p></p>
+        <h5><div id="product"></div></h5>
+</div>
+</div>
+</div>
 
     <section class="ftco-section">
     	<div class="container">
@@ -382,7 +400,7 @@ window.onclick = function(event) {
     						</div>
     					</div>
     				</div>
-          </div>            
+          </div>
     		</div>
     	</div>
     </section>
