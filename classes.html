@@ -25,8 +25,12 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/ufcnow.js"></script>
+
   </head>
-  <body>
+  <body onload="loadDb()">
+
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">UFC:NOW</a>
@@ -58,63 +62,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="ftco-section ftco-no-pt">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6 img img-2 order-md-last" style='background-image: url(images/conor2.jpg);'>
-
-    			</div>
-    			<div class="col-md-6 py-5">
-    				<div class="program d-flex ftco-animate">
-							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
-								<span class="flaticon-gym"></span>
-							</div>
-							<div class="text ml-5 mr-lg-4 text-lg-right">
-								<h3>Crossfit</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							</div>
-  					</div>
-  					<div class="program d-flex ftco-animate">
-							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
-								<span class="flaticon-woman"></span>
-							</div>
-							<div class="text ml-5 mr-lg-4 text-lg-right">
-								<h3>Aerobic Classes</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							</div>
-  					</div>
-  					<div class="program d-flex ftco-animate">
-							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
-								<span class="flaticon-workout"></span>
-							</div>
-							<div class="text ml-5 mr-lg-4 text-lg-right">
-								<h3>Fitness</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							</div>
-  					</div>
-  					<div class="program d-flex ftco-animate">
-							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
-								<span class="flaticon-meditation"></span>
-							</div>
-							<div class="text ml-5 mr-lg-4 text-lg-right">
-								<h3>Yoga Classes</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							</div>
-  					</div>
-  					<div class="program d-flex ftco-animate">
-							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
-								<span class="flaticon-stationary-bike"></span>
-							</div>
-							<div class="text ml-5 mr-lg-4 text-lg-right">
-								<h3>Cardio Training</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							</div>
-  					</div>
-    			</div>
-    		</div>
-    	</div>
     </section>
 
     <section class="ftco-section">
@@ -151,7 +98,7 @@
     						<h3>Featherweight</h3>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
-    						<a href="#" class="btn-custom px-4 py-2">Explore</a>
+    						<button onclick="showFeather(document.getElementById('textarea'))" class="btn-custom px-4 py-2">Explore</button>
     						<div>
     							<h3><a href="#">Featherweight</a></h3>
     							<p>This is one of the best divisions right now with stars Max Holloway and Brian Ortega creating an intense rivalry after an incredible recent encounter.</p>
@@ -165,7 +112,7 @@
     						<h3>Lightweight</h3>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
-    						<a href="#" class="btn-custom px-4 py-2">Explore</a>
+    						<button onclick="showLight(document.getElementById('textarea'))" class="btn-custom px-4 py-2">Explore</button>
     						<div>
     							<h3><a href="#">Lightweight</a></h3>
     							<p>Perhaps many peoples favourite division including Worldwide star Conor McGregor and the undefeated champion Khabib Nurmagomedov.</p>
@@ -212,11 +159,71 @@
     							<h3><a href="#">Heavyweight</a></h3>
     							<p>By far the most explosive division in the UFC. These guys are some of the biggest & baddest on the planet.</p>
     						</div>
+                <p>
+                <div id="textarea"></div>
+                </p>
     					</div>
     				</div>
     			</div>
     		</div>
     	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 img img-2 order-md-last" style='background-image: url(images/conor2.jpg);'>
+
+          </div>
+          <div class="col-md-6 py-5">
+            <div class="program d-flex ftco-animate">
+              <div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+                <span class="flaticon-gym"></span>
+              </div>
+              <div class="text ml-5 mr-lg-4 text-lg-right">
+                <h3>Crossfit</h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              </div>
+            </div>
+            <div class="program d-flex ftco-animate">
+              <div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+                <span class="flaticon-woman"></span>
+              </div>
+              <div class="text ml-5 mr-lg-4 text-lg-right">
+                <h3>Aerobic Classes</h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              </div>
+            </div>
+            <div class="program d-flex ftco-animate">
+              <div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+                <span class="flaticon-workout"></span>
+              </div>
+              <div class="text ml-5 mr-lg-4 text-lg-right">
+                <h3>Fitness</h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              </div>
+            </div>
+            <div class="program d-flex ftco-animate">
+              <div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+                <span class="flaticon-meditation"></span>
+              </div>
+              <div class="text ml-5 mr-lg-4 text-lg-right">
+                <h3>Yoga Classes</h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              </div>
+            </div>
+            <div class="program d-flex ftco-animate">
+              <div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+                <span class="flaticon-stationary-bike"></span>
+              </div>
+              <div class="text ml-5 mr-lg-4 text-lg-right">
+                <h3>Cardio Training</h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="ftco-footer ftco-section img">

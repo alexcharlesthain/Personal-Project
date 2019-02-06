@@ -25,8 +25,12 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/ufcnow.js"></script>
+
   </head>
-  <body>
+  <body onload="loadDb()">
+
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">UFC:NOW</a>
@@ -64,12 +68,14 @@
           </div>
           <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
+                              <div align="center">
                                 <form class="form-wrap mt-4">
                                     <div class="btn-group" role="group" aria-label="Basic example">
 
-                                        <input type="text" placeholder="Type any letter to begin searching our collection.." id="textsearch" oninput="searchFighters(document.getElementById('textsearch'))">
-                                        <button onclick="searchFighters(document.getElementById('textsearch'))" type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>SEARCH FIGHTERS</button>
+                                        <input type="text" placeholder="Type any letter to begin searching fighters.." id="textSearch" oninput="searchFighters(document.getElementById('textSearch'))">
+                                        <button onclick="searchFighters(document.getElementById('textSearch'))" type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>SEARCH FIGHTERS</button>
                                         <br><br><br>
+                                        <p></p>
                                     </div>
                                 </form>
                                 <div class="slider-content_wrap">
@@ -632,7 +638,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/ufcnow.js"></script>
+
 
   </body>
 </html>
