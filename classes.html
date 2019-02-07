@@ -53,7 +53,7 @@
 
 
     <section class="hero-wrap js-fullheight">
-      <div class="overlay" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5"></div>
+      <div class="overlay" style="background-image: url(images/bg_2b.jpg);" data-stellar-background-ratio="0.5"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end">
           <div class="col-md-12 text-center ftco-animate">
@@ -68,6 +68,9 @@
     	<div class="container">
     		<div class="row justify-content-center mb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
+            <p>
+            <div id="textarea"></div>
+            </p>
           	<span class="subheading">
           		<i class="db-left"></i>
           		Classes
@@ -84,7 +87,7 @@
     						<h3>Bantameight</h3>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
-    						<a href="#" class="btn-custom px-4 py-2">Explore</a>
+    						<button onClick="showWeightClass('Bantamweight');" class="btn-custom px-4 py-2">Explore</button>
     						<div>
     							<h3><a href="#">Bantamweight</a></h3>
     							<p>This division has some intense rivalry especially between Current champion TJ Dillashaw & Former champ Cody Garbrandt.</p>
@@ -98,7 +101,7 @@
     						<h3>Featherweight</h3>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
-    						<button onclick="showFeather(document.getElementById('textarea'))" class="btn-custom px-4 py-2">Explore</button>
+    						<button onclick="showWeightClass('Featherweight');" class="btn-custom px-4 py-2">Explore</button>
     						<div>
     							<h3><a href="#">Featherweight</a></h3>
     							<p>This is one of the best divisions right now with stars Max Holloway and Brian Ortega creating an intense rivalry after an incredible recent encounter.</p>
@@ -112,7 +115,7 @@
     						<h3>Lightweight</h3>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
-    						<button onclick="showLight(document.getElementById('textarea'))" class="btn-custom px-4 py-2">Explore</button>
+    						<button onClick="showWeightClass('Lightweight');" class="btn-custom px-4 py-2">Explore</button>
     						<div>
     							<h3><a href="#">Lightweight</a></h3>
     							<p>Perhaps many peoples favourite division including Worldwide star Conor McGregor and the undefeated champion Khabib Nurmagomedov.</p>
@@ -126,7 +129,7 @@
     						<h3>Welterweight</h3>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
-    						<a href="#" class="btn-custom px-4 py-2">Explore</a>
+    						<button onClick="showWeightClass('Welterweight');" class="btn-custom px-4 py-2">Explore</button>
     						<div>
     							<h3><a href="#">Welterweight</a></h3>
     							<p>This is a division with dominating champion Tyron Woodley but includes exciting up and coming stars.</p>
@@ -140,7 +143,7 @@
     						<h3>Light-Heavyweight</h3>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
-    						<a href="#" class="btn-custom px-4 py-2">Explore</a>
+    						<button onClick="showWeightClass('Light-Heavyweight');" class="btn-custom px-4 py-2">Explore</button>
     						<div>
     							<h3><a href="#">Light-Heavyweight</a></h3>
     							<p>This is a very exciting division full of heavy hitters. Amongst them is one of the greatest of all time Jon Jones.</p>
@@ -154,20 +157,20 @@
     						<h3>Heavyweight</h3>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
-    						<a href="#" class="btn-custom px-4 py-2">Explore</a>
+    						<button onClick="showWeightClass('Heavyweight');" class="btn-custom px-4 py-2">Explore</button>
     						<div>
     							<h3><a href="#">Heavyweight</a></h3>
     							<p>By far the most explosive division in the UFC. These guys are some of the biggest & baddest on the planet.</p>
     						</div>
-                <p>
-                <div id="textarea"></div>
-                </p>
+
     					</div>
     				</div>
     			</div>
     		</div>
     	</div>
     </section>
+
+    <h5><div id="FightersList" class="fighterlist"></div></h5>
 
     <section class="ftco-section ftco-no-pt">
       <div class="container">

@@ -29,129 +29,8 @@
     <link rel="stylesheet" href="css/searchbar.css">
 
     <script src="js/ufcnowshop.js"></script>
-    <!--<link rel="stylesheet" href="css/login.css">-->
-    <style>
-body {font-family: Arial, Helvetica, sans-serif;}
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 15%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #ECEFF0;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #FA8072;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #FF0000;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
+    <script src="css/loginbox.css"></script>
 
   </head>
   <body onload="loadDb()">
@@ -165,7 +44,7 @@ span.psw {
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-						<li class="nav-item"><a href="about.html" class="nav-link">Events</a></li>
+						<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="classes.html" class="nav-link">Fighters</a></li>
 	          <li class="nav-item"><a href="trainers.html" class="nav-link">Pound4Pound</a></li>
 	          <li class="nav-item active"><a href="pricing.html" class="nav-link">Shop</a></li>
@@ -178,7 +57,7 @@ span.psw {
 
 
     <section class="hero-wrap js-fullheight">
-      <div class="overlay" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5"></div>
+      <div class="overlay" style="background-image: url(images/codybg.jpg);" data-stellar-background-ratio="0.5"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end">
           <div class="col-md-12 text-center ftco-animate">
@@ -229,8 +108,7 @@ window.onclick = function(event) {
         </div>
       </div>
     </section>
-    <div>
-    <div class="wrap">
+    <div class="centerme">
       <div class="search">
         <input type="text" class="searchTerm" placeholder="Type any letter to begin searching products.." onInput="searchProducts(document.getElementById('textsearch'))" id="textsearch">
         <button type="submit" class="searchButton" onClick="searchProducts(document.getElementById('textsearch'))">
@@ -238,7 +116,7 @@ window.onclick = function(event) {
         </button>
         <br><br><br>
         <p></p>
-        <h5><div id="product"></div></h5>
+        <h5><div id="product" class="productlist"></div></h5>
 </div>
 </div>
 </div>
@@ -258,17 +136,17 @@ window.onclick = function(event) {
         </div>
     		<div class="row">
     			<div class="col-md-4">
-    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/program-1.jpg);">
+    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/fingerlessgloves.jpg);">
     					<div class="title p-4">
     						<h3>Gloves</h3>
-    						<span>Behind the word mountains</span>
+    						<span>Gym Gear</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">£30.00</span>
+    							<span class="price">£12.50</span>
     							<h3><a href="#">Gloves</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<p>Stay protected whilst training on the bags or lifting.</p>
     						</div>
     					</div>
     				</div>
@@ -277,14 +155,14 @@ window.onclick = function(event) {
     				<div class="pricing-wrap ftco-animate active img" style="background-image: url(images/program-2.jpg);">
     					<div class="title p-4">
     						<h3>Shorts</h3>
-    						<span>Behind the word mountains</span>
+    						<span>Gym Gear</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">£40.00</span>
+    							<span class="price">£25.00</span>
     							<h3><a href="#">Shorts</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<p>Official Training Shorts for the gym.</p>
     						</div>
     					</div>
     				</div>
@@ -293,14 +171,14 @@ window.onclick = function(event) {
     				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/program-3.jpg);">
     					<div class="title p-4">
     						<h3>T-Shirts</h3>
-    						<span>Behind the word mountains</span>
+    						<span>Gym Gear</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">£25.00</span>
+    							<span class="price">£18.50</span>
     							<h3><a href="#">T-Shirts</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<p>Official Training T-Shirts for the gym.</p>
     						</div>
     					</div>
     				</div>
@@ -308,15 +186,15 @@ window.onclick = function(event) {
     			<div class="col-md-4">
     				<div class="pricing-wrap img" style="background-image: url(images/program-4.jpg);">
     					<div class="title p-4">
-    						<h3>Posters</h3>
-    						<span>Behind the word mountains</span>
+    						<h3>Fighter Posters</h3>
+    						<span>Your Favourite Fighters</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">£10.00</span>
-    							<h3><a href="#">Posters</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<span class="price">£5.00</span>
+    							<h3><a href="#">Fighter Posters</a></h3>
+    							<p>Posters dedicated to your favourite fighters.</p>
     						</div>
     					</div>
     				</div>
@@ -324,63 +202,63 @@ window.onclick = function(event) {
     			<div class="col-md-4">
     				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/program-5.jpg);">
     					<div class="title p-4">
-    						<h3>Weight Lifting</h3>
-    						<span>Behind the word mountains</span>
+    						<h3>Event Posters</h3>
+    						<span>Your Favourite Events</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">$240.00</span>
-    							<h3><a href="#">Weight Lifting</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<span class="price">£5.00</span>
+    							<h3><a href="#">Event Posters</a></h3>
+    							<p>Posters dedicated to your favourite events.</p>
     						</div>
     					</div>
     				</div>
     			</div>
     			<div class="col-md-4">
-    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/program-6.jpg);">
+    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/rucksack.jpg);">
     					<div class="title p-4">
-    						<h3>Weight Lifting</h3>
-    						<span>Behind the word mountains</span>
+    						<h3>Rucksack</h3>
+    						<span>Gear</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">$240.00</span>
-    							<h3><a href="#">Weight Lifting</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<span class="price">£22.50</span>
+    							<h3><a href="#">Rucksack</a></h3>
+    							<p>Keep all your gym gear in this handy pack.</p>
     						</div>
     					</div>
     				</div>
           </div>
           <div class="col-md-4">
-    				<div class="pricing-wrap img" style="background-image: url(images/program-4.jpg);">
+    				<div class="pricing-wrap img" style="background-image: url(images/program-7.jpg);">
     					<div class="title p-4">
-    						<h3>Posters</h3>
-    						<span>Behind the word mountains</span>
+    						<h3>Water Bottle</h3>
+    						<span>Gym Gear</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">£10.00</span>
-    							<h3><a href="#">Posters</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<span class="price">£6.50</span>
+    							<h3><a href="#">Water Bottle</a></h3>
+    							<p>Stay hydrated in the gym.</p>
     						</div>
     					</div>
     				</div>
     			</div>
     			<div class="col-md-4">
-    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/program-5.jpg);">
+    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/vest.jpg);">
     					<div class="title p-4">
-    						<h3>Weight Lifting</h3>
-    						<span>Behind the word mountains</span>
+    						<h3>Gym Vest</h3>
+    						<span>Gym Gear</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">$240.00</span>
-    							<h3><a href="#">Weight Lifting</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<span class="price">£10.00</span>
+    							<h3><a href="#">Gym Vest</a></h3>
+    							<p>Stay cool whilst in the gym.</p>
     						</div>
     					</div>
     				</div>
@@ -388,15 +266,63 @@ window.onclick = function(event) {
     			<div class="col-md-4">
     				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/program-6.jpg);">
     					<div class="title p-4">
-    						<h3>Weight Lifting</h3>
-    						<span>Behind the word mountains</span>
+    						<h3>MouthGuard</h3>
+    						<span>Gym Gear</span>
     					</div>
     					<div class="text p-4 d-flex align-items-end">
     						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
     						<div>
-    							<span class="price">$240.00</span>
-    							<h3><a href="#">Weight Lifting</a></h3>
-    							<p>Far far away, behind the word mountains, far from the countries.</p>
+    							<span class="price">£5.00</span>
+    							<h3><a href="#">MouthGuard</a></h3>
+    							<p>Stay protected whilst sparring.</p>
+    						</div>
+    					</div>
+    				</div>
+          </div>
+          <div class="col-md-4">
+    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/beanie.jpg);">
+    					<div class="title p-4">
+    						<h3>Beanie Hat</h3>
+    						<span>Gear</span>
+    					</div>
+    					<div class="text p-4 d-flex align-items-end">
+    						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
+    						<div>
+    							<span class="price">£7.50</span>
+    							<h3><a href="#">Beanie Hat</a></h3>
+    							<p>Stay warm on them hard winter training sessions.</p>
+    						</div>
+    					</div>
+    				</div>
+          </div>
+          <div class="col-md-4">
+    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/cap.jpg);">
+    					<div class="title p-4">
+    						<h3>Cap</h3>
+    						<span>Gear</span>
+    					</div>
+    					<div class="text p-4 d-flex align-items-end">
+    						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
+    						<div>
+    							<span class="price">£7.50</span>
+    							<h3><a href="#">Cap</a></h3>
+    							<p>Keep the sun out your eyes in the summer with this cool cap.</p>
+    						</div>
+    					</div>
+    				</div>
+          </div>
+          <div class="col-md-4">
+    				<div class="pricing-wrap ftco-animate img" style="background-image: url(images/duffel.jpg);">
+    					<div class="title p-4">
+    						<h3>Duffel Bag</h3>
+    						<span>Gear</span>
+    					</div>
+    					<div class="text p-4 d-flex align-items-end">
+    						<a href="#" class="btn-custom px-4 py-2">Add to Cart</a>
+    						<div>
+    							<span class="price">£25.00</span>
+    							<h3><a href="#">Duffel Bag</a></h3>
+    							<p>Keep more of your gym gear in this big duffel bag.</p>
     						</div>
     					</div>
     				</div>

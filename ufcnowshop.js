@@ -24,31 +24,32 @@ function searchProducts(ufc){
 
     if(JSONarray[i].title.includes(ufc.value.toUpperCase())){
 
-      document.getElementById("product").innerHTML += JSONarray[i].title + "<br>" + JSONarray[i].description + "<br><br>"  + JSONarray[i].category + "<br><br>" + JSONarray[i].rating + "<br><br>" + JSONarray[i].price + "<br><br>£";
+      //document.getElementById("product").innerHTML += JSONarray[i].title + "<br>" + JSONarray[i].description + "<br><br>"  + JSONarray[i].category + "<br><br>" + JSONarray[i].rating + "<br><br>£" + JSONarray[i].price + "<br><br>";
+      document.getElementById("product").innerHTML += "<br><div class='holster'>" + JSONarray[i].title + "<br>" + JSONarray[i].description + "<br>"  + JSONarray[i].category + "<br>£" + JSONarray[i].price + "<div id='holster'><br>";
     }
   }
 }
 
-/*function showBantam(ufc){
+function showGloves(ufc){
   document.getElementById("textarea").innerHTML = "";
 
   for(i = 0; i < JSONarray.length; i++){
 
-    if(JSONarray[i].class == "Bantamweight"){
+    if(JSONarray[i].category == "gloves"){
 
-      document.getElementById("textarea").innerHTML += JSONarray[i].firstName + "<br>" + JSONarray[i].description + "<br><br>"  + JSONarray[i].fighters + "<br><br>";
+      document.getElementById("textarea").innerHTML += JSONarray[i].title + "<br>" + JSONarray[i].description + "<br><br>"  + JSONarray[i].price + "<br><br>£";
     }
   }
 }
 
-function showWelter(ufc){
+function show(ufc){
   document.getElementById("textarea").innerHTML = "";
 
   for(i = 0; i < JSONarray.length; i++){
 
-    if(JSONarray[i].class == "Welterweight"){
+    if(JSONarray[i].category == "Gear"){
 
-      document.getElementById("textarea").innerHTML += JSONarray[i].firstName + "<br>" + JSONarray[i].description + "<br><br>"  + JSONarray[i].fighters + "<br><br>";
+      document.getElementById("textarea").innerHTML += JSONarray[i].title + "<br>" + JSONarray[i].description + "<br><br>"  + JSONarray[i].price + "<br><br>£";
     }
   }
 }
@@ -111,13 +112,4 @@ function showLHW(ufc){
       document.getElementById("textarea").innerHTML += JSONarray[i].firstName + "<br>" + JSONarray[i].description + "<br><br>"  + JSONarray[i].fighters + "<br><br>";
     }
   }
-}*/
-
-//function showDocumentary(film){
-  //document.getElementById("textarea").innerHTML = "";
-
-//  for(i = 0; i < JSONarray.length; i++){
-
-  //  if(JSONarray[i].category == "Documentary"){
-
-  //    document.getElementById("textarea").innerHTML += JSONarray[i].title + "<br>" + JSONarray[i].description + "<br><br>"  + JSONarray[i].price + "<br><br>";
+}
