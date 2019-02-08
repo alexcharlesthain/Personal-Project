@@ -26,18 +26,22 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <!--<link rel="stylesheet" href="css/loginbox.css">-->
+
     <link rel="stylesheet" href="css/searchbar.css">
 
     <script src="js/ufcnowshop.js"></script>
 
-    <script src="css/loginbox.css"></script>
+    <script src="js/login.js"></script>
+
+
 
   </head>
   <body onload="loadDb()">
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Shop</a>
+	      <a class="navbar-brand" href="index.html">UFC:NOW</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -73,14 +77,11 @@
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/login.png" alt="Avatar" class="avatar">
     </div>
-
     <div class="container">
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
-
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-
       <button type="submit">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -91,23 +92,13 @@
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
-<script>
-// Get the modal
-let modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
   </form>
+    </div>
+  </div>
 </div>
-          </div>
-        </div>
-      </div>
-    </section>
+</div>
+</section>
     <div class="centerme">
       <div class="search">
         <input type="text" class="searchTerm" placeholder="Type any letter to begin searching products.." onInput="searchProducts(document.getElementById('textsearch'))" id="textsearch">
@@ -388,7 +379,7 @@ window.onclick = function(event) {
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
