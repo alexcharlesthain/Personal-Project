@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Order | UFC:NOW</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/addedcart.css">
+    <link rel="stylesheet" href="css/basket.css">
+
+    <script src="js/ufcnowshop.js"></script>
+    <script src="js/basket.js"></script>
+
+  </head>
+  <body onload="loadDb()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">UFC:NOW</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+						<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="classes.html" class="nav-link">Fighters</a></li>
+	          <li class="nav-item"><a href="trainers.html" class="nav-link">Pound4Pound</a></li>
+	          <li class="nav-item active"><a href="pricing.html" class="nav-link">Shop</a></li>
+            <li class="nav-item"><a href="basket.html" class="nav-link">Order</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+    <section class="hero-wrap js-fullheight">
+      <div class="overlay" style="background-image: url(images/basketpic.jpg);" data-stellar-background-ratio="0.5"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end">
+          <div class="col-md-12 text-center ftco-animate">
+            <h1 class="mb-3 bread" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">Basket</h1>
+            <p class="breadcrumbs"><span class="mr-2"><span>Use the form below to shop</span></p>
+            <br><br>
+    </section>
+<section>
+  <div class="fighterlist">
+    <center><h1>Order Form</h1></center>
+      <p><h5>Use the form below to select items for order and calculate price with postage costs. You can then enter your information which will send to our head office when you press place order.</p></h5>
+      <br>
+        <form method="post" name="orderform" action="mailto:alexcharlesthain@gmail.com" enctype="text/plain">
+          <table border="0">
+            <tr><td colspan="4">
+              <table>
+              <th>
+              <p><input type="checkbox" name="Item1" value="Item1_chosen" onclick="tally()"> Gym Gloves | Full Length (£15.00)
+              <p><input type="checkbox" name="Item2" value="Item2_chosen" onclick="tally()"> Gym Shorts | Performance  (£30.00)
+              <p><input type="checkbox" name="Item3" value="Item3_chosen" onclick="tally()"> Fighter Poster  (£5.00)
+              <p><input type="checkbox" name="Item4" value="Item4_chosen" onclick="tally()"> Fight Wraps (£8.50)
+              <p><input type="checkbox" name="Item5" value="Item5_chosen" onclick="tally()"> Gym Bag | Duffel (£25.00)
+              </th>
+              <th>
+              <p><input type="checkbox" name="Item6" value="Item6_chosen" onclick="tally()"> Stickers (£2.00)
+              <p><input type="checkbox" name="Item7" value="Item7_chosen" onclick="tally()"> Gym Gloves | Cut Fingers (£12.50)
+              <p><input type="checkbox" name="Item8" value="Item8_chosen" onclick="tally()"> Gym Bag | Rucksack (£22.50)
+              <p><input type="checkbox" name="Item9" value="Item9_chosen" onclick="tally()"> Water Bottle (£6.50)
+              <p><input type="checkbox" name="Item10" value="Item10_chosen" onclick="tally()"> Hat | Cap (£7.50)
+              </th>
+              <th>
+              <p><input type="checkbox" name="Item11" value="Item11_chosen" onclick="tally()"> Hat | Beanie (£7.50)
+              <p><input type="checkbox" name="Item12" value="Item12_chosen" onclick="tally()"> Mouth Guard (£5.00)
+              <p><input type="checkbox" name="Item13" value="Item13_chosen" onclick="tally()"> Event Poster (£5.00)
+              <p><input type="checkbox" name="Item14" value="Item14_chosen" onclick="tally()"> T Shirt | Short Sleeve (£18.50)
+              <p><input type="checkbox" name="Item15" value="Item15_chosen" onclick="tally()"> Vest (£10.00)
+              </th>
+              <th>
+              <p><input type="checkbox" name="Item16" value="Item16_chosen" onclick="tally()"> Gym Shorts | Training (£25.00)
+              <p><input type="checkbox" name="Item17" value="Item17_chosen" onclick="tally()"> T Shirt | Long Sleeve (£20.00)
+              <p><input type="checkbox" name="Item18" value="Item18_chosen" onclick="tally()"> Hoodie (£30.00)
+              <p><input type="checkbox" name="Item19" value="Item19_chosen" onclick="tally()"> Jumper (£30.00)
+              <p><input type="checkbox" name="Item20" value="Item20_chosen" onclick="tally()"> UFC Belt (£20.00)
+              </th>
+            </table>
+            </td></tr>
+            <tr>
+              <td> Total: <input type="text" name="Total" value="£0" size="7"></td>
+              <td> Postage: (7%) <input type="text" name="Postage" value="£0"  size="6"></td>
+              <td> Grand Total: <input type="text" name="GrandTotal" value="£0" size="8"></td>
+              <td>   </td>
+            </tr>
+            <tr>
+              <td>Contact Name:</td>
+              <td><input type="Text" name="FirstLastName" size="20" maxlength="30"></td>
+              <td>Address:</td>
+              <td><input type="Text" name="Street" size="20" maxlength="40"></td>
+            </tr>
+            <tr>
+              <td>City:</td>
+              <td><input type="Text" name="City" size="20" maxlength="20"> </td>
+              <td>County:</td>
+              <td><input type="Text" name="County" size="20" maxlength="20"></td>
+            </tr>
+            <tr>
+              <td>Country:</td>
+              <td><input type="Text" name="Country" size="20" maxlength="20"></td>
+              <td>Postcode:</td>
+              <td><input type="Text" name="Code" size="20" maxlength="20"></td>
+            </tr>
+            <tr>
+              <td>Phone No + Country Code:</td>
+              <td><input type="Text" name="Area" size="3" maxlength="5"> <input type="Text" name="Phone" size="14" maxlength="15"></td>
+              <td>Email Address:</td>
+              <td colspan=2><input type="Text" name="Email" size="30" maxlength="30"></td>
+            </tr>
+            <tr><td colspan="2" align="center"><input type="Submit" value="Send Order"></td>
+              <td colspan="2" align="center"><input type="RESET" value="Reset Order"></td></tr>
+        </table>
+      </form>
+</section>
+
+<footer class="ftco-footer ftco-section img">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+        <div class="ftco-footer-widget mb-4">
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Whats Happening?</h2>
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+            <div class="text">
+              <h3 class="heading"><a href="#">Adesanya Defeats Silva</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> January 10, 2019</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 6</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+            <div class="text">
+              <h3 class="heading"><a href="#">Whittaker pulls out due to injury</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> February 10, 2019</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 23</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Have a Questions?</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text">Anchorage 1, Salford Quays, Salford, Manchester, M5</span></li>
+              <li><a href="#"><span class="icon icon-phone"></span><span class="text">+44 7788996655</span></a></li>
+              <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@ufcnow.com</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+
+        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

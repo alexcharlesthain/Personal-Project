@@ -181,7 +181,8 @@ svg:not(:root) {
   overflow: hidden; }
 
 table {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  width: 100%; }
 
 caption {
   padding-top: 0.75rem;
@@ -192,6 +193,29 @@ caption {
 
 th {
   text-align: inherit; }
+
+td {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+  align-self:stretch;
+ }
+
+tr:nth-child(even){
+  background-color: #661313;
+  transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+}
+
+tr:hover {
+  background-color: #000;
+  transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+}
 
 label {
   display: inline-block;
@@ -7282,7 +7306,7 @@ body {
     width: 100%; }
 
 span {
-  color: #bfbfbf; }
+  color: #00E6FF; }
 
 a {
   -webkit-transition: .3s all ease;
